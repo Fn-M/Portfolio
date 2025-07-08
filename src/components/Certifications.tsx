@@ -1,33 +1,18 @@
 import { motion } from 'framer-motion'
 import { Award, ExternalLink } from 'lucide-react'
+import certificates from '../../Resources/Certifications.json';
+import { useState } from 'react';
+
+// Helper to sort by date desc (year as string)
+function sortByDateDesc(list: any[]) {
+  return [...list].sort((a, b) => Number(b.date) - Number(a.date));
+}
 
 const Certifications = () => {
-  const certifications = [
-    {
-      id: 1,
-      title: "Learn TypeScript",
-      issuer: "Codecademy",
-      date: "2025",
-      link: "https://www.codecademy.com/profiles/FanMra/certificates/56fb1e71303e37b643bb1905f31c8a09",
-      description: "Comprehensive course covering TypeScript fundamentals including types, functions, complex types, union types, type narrowing, and advanced object types. Enhanced JavaScript skills with type system for more reliable and maintainable code."
-    },
-    {
-      id: 2,
-      title: "Learn Python for Data Science",
-      issuer: "Codecademy",
-      date: "2025",
-      link: "https://www.codecademy.com/profiles/FanMra/certificates/ac83e31a3e114189849dd4ee714834eb",
-      description: "Comprehensive skill path covering Python programming for data science, including pandas, data cleaning, transformation, and analysis using Jupyter Notebook. Completed hands-on projects with real datasets."
-    },
-    {
-      id: 3,
-      title: "Learn React",
-      issuer: "Codecademy",
-      date: "2025",
-      link: "https://www.codecademy.com/profiles/FanMra/certificates/af00e5032d0a68cc84879983f5d8333b",
-      description: "Comprehensive course covering React fundamentals including JSX, components, props, state, hooks, and React programming patterns. Built interactive applications and learned modular development approach for powerful web applications."
-    }
-  ]
+  const [showAll, setShowAll] = useState(false);
+  const sorted = sortByDateDesc(certificates);
+  const featured = sorted.filter(cert => cert.featured);
+  const visibleCerts = showAll ? sorted : featured;
 
   return (
     <section id="certifications" className="py-20 bg-gray-50">
@@ -46,47 +31,50 @@ const Certifications = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certifications.map((cert, index) => (
+          {visibleCerts.map((cert, index) => (
             <motion.div
-              key={cert.id}
+              key={cert.link}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-200"
+              className={`relative group bg-gray-50 rounded-xl shadow-lg p-4 hover:shadow-2xl transition-all duration-200 border border-gray-200 ${cert.featured ? 'border-blue-400' : ''}`}
+              style={{ minHeight: 120 }}
             >
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
                   <Award className="w-6 h-6" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900">{cert.title}</h3>
-                  <p className="text-sm text-gray-600">{cert.issuer}</p>
+                <div className="flex-1 min-w-0">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-base font-semibold text-gray-900">{cert.title}</h3>
+                    <span className="text-xs text-gray-500 ml-2">{cert.date}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs text-gray-600">{cert.issuer}</span>
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-blue-600 hover:underline text-xs flex items-center gap-1"
+                    >
+                      Verify <ExternalLink size={12} />
+                    </a>
+                  </div>
                 </div>
               </div>
-
-              <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                {cert.description}
-              </p>
-
-              <div className="space-y-2 mb-4">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">Issued:</span>
-                  <span className="font-medium text-gray-700">{cert.date}</span>
-                </div>
-              </div>
-
-              <a
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
-              >
-                Verify Certificate
-                <ExternalLink size={14} />
-              </a>
+              <p className="text-xs text-gray-500 mt-1">{cert.description}</p>
             </motion.div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setShowAll(v => !v)}
+            className="px-6 py-2 bg-blue-100 text-blue-700 rounded-lg font-medium hover:bg-blue-200 transition-colors"
+          >
+            {showAll ? 'Show less' : 'Show all'}
+          </button>
         </div>
 
         <motion.div
