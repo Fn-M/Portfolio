@@ -1,28 +1,45 @@
+/// <reference types="vite/client" />
 import { motion } from 'framer-motion'
 import { Mail, Linkedin, Github, Globe } from 'lucide-react'
 
 const Contact = () => {
+  interface SocialLink {
+    name: string,
+    url: string, 
+    icon: JSX.Element,
+    color: string
+  }
 
-  const socialLinks = [
-    {
-      name: "LinkedIn",
-      icon: <Linkedin className="w-5 h-5" />,
-      url: "https://linkedin.com/in/fabio-nmiranda",
+  const email = import.meta.env.VITE_CONTACT_EMAIL;
+  const socialMediaConfig = {
+    linkedin: {
+      icon: <Linkedin className="w-5 h-5"/>,
       color: "hover:bg-blue-600"
     },
-    {
-      name: "GitHub",
-      icon: <Github className="w-5 h-5" />,
-      url: "https://github.com/Fn-M",
+    github: {
+      icon: <Github className="w-5 h-5"/>,
       color: "hover:bg-gray-800"
     },
-    {
-      name: "Codeacademy",
-      icon: <Globe className="w-5 h-5" />,
-      url: "https://www.codecademy.com/profiles/FanMra",
-      color: "hover:bg-green-600"
+    codeacademy: {
+      icon: <Globe className="w-5 h-5"/>,
+      color:"hover:bg-green-600"
     }
-  ]
+  };
+  const socialLinks = (() => {
+    try {
+      return JSON.parse(import.meta.env.VITE_SOCIAL_LINKS).map((item: any): SocialLink => ({
+        ...item,
+        ...(socialMediaConfig[item.name as keyof typeof socialMediaConfig] || {
+          icon: <Globe className="w-5 h-5" />,
+          color: "hover:bg-gray-400"
+        })
+      }));
+    } catch {
+      return [];
+    }
+  })();
+ 
+
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -51,7 +68,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Follow me</h3>
             
             <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
+                {socialLinks.map((social: SocialLink, index:number) => (
                   <motion.a
                     key={index}
                     href={social.url}
@@ -99,21 +116,18 @@ const Contact = () => {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
             
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="john@example.com"
-                  required
-                />
-              </div>
-              
+            <form
+              className="space-y-6"
+              onSubmit={e => {
+                e.preventDefault();
+                const form = e.target as HTMLFormElement;
+                const subjectValue = form.subject.value;
+                const messageValue = form.message.value;
+                const to = email;
+                const mailto = `mailto:${to}?subject=${encodeURIComponent(subjectValue)}&body=${encodeURIComponent(`${messageValue}`)}`;
+                window.location.href = mailto;
+              }}
+            >
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                   Subject
@@ -167,7 +181,7 @@ const Contact = () => {
               Let's discuss how we can work together to bring your ideas to life. I'm excited to hear about your project!
             </p>
             <a
-              href="mailto:fabiomiranda.getintouch@proton.me"
+              href={`mailto:${email}`}
               className="inline-flex items-center gap-2 px-8 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
               <Mail size={16} />
