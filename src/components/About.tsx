@@ -35,7 +35,7 @@ const About = () => {
                 Currently based in <span className="font-semibold">Rotterdam, Netherlands</span>, I specialize in leading remote development teams and implementing agile methodologies. I'm also passionate about AI and leveraging modern AI-powered tools to boost development efficiency and code quality.
               </p>
               <p>
-                My journey started in Lisbon, Portugal, where I earned my Bachelor's in Computer Engineering. Since then, I've worked across Portugal 🇵🇹, Ireland 🇮🇪, and the Netherlands 🇳🇱, gaining valuable experience with multicultural teams.
+                My journey started in Lisbon, Portugal, where I earned my Bachelor's in Computer Engineering. <span className="font-semibold">During my degree, I also participated in an Erasmus program in the Czech Republic (🇨🇿).</span> Since then, I've worked across Portugal (🇵🇹), Ireland (🇮🇪), and the Netherlands (🇳🇱), gaining valuable experience with multicultural teams.
               </p>
               <p>
                 Over the years, I've grown from writing desktop applications to leading remote cross-functional teams and managing complex system migrations. This international experience has taught me the importance of effective communication, cultural sensitivity, and adapting to different work styles and methodologies.
