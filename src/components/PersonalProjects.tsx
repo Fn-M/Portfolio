@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { ExternalLink, Github, Globe } from 'lucide-react'
 import portfolioImg from '../../resources/profolio.png';
 import vehicleHistoryImg from '../../resources/CarMaintenance.png';
-import personalProjectsRaw from '../../Resources/PersonalProjects.json' assert { type: 'json' };
+import personalProjectsRaw from '../../Resources/PersonalProjects.json';
 
 interface Project {
   id: number;
@@ -13,6 +13,11 @@ interface Project {
   github: string;
   live: string;
   featured: boolean;
+}
+
+type SocialLink = {
+  name:string,
+  url:string
 }
 
 const imageMap: Record<string, string> = {
@@ -26,6 +31,7 @@ const projects: Project[] = (personalProjectsRaw as Project[]).map((project) => 
 }));
 
 const PersonalProjects = () => {
+  const socialLinks : SocialLink[] = JSON.parse(import.meta.env.VITE_SOCIAL_LINKS);
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,7 +127,7 @@ const PersonalProjects = () => {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com/fabio-miranda"
+            href={socialLinks.find(sl => sl.name==='github')?.url}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"

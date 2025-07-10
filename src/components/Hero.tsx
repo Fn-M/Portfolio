@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion'
 import { ChevronDown, MapPin, Linkedin } from 'lucide-react'
 
+type SocialLink = { name: string; url: string };
+
 const Hero = () => {
+  const socialLinks: SocialLink[] = JSON.parse(import.meta.env.VITE_SOCIAL_LINKS);
+  
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -64,7 +68,7 @@ const Hero = () => {
               View My Work
             </motion.button>
             <motion.a
-              href="https://linkedin.com/in/fabio-miranda"
+              href={socialLinks.find(sl => sl.name === 'linkedin')?.url}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900"

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, Users, Calendar } from 'lucide-react'
-import professionalProjectsRaw from '../../Resources/ProfessionalProjects.json' assert { type: 'json' };
+import professionalProjectsRaw from '../../Resources/ProfessionalProjects.json';
 
 interface Project {
   id: number;

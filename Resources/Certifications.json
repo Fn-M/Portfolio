@@ -1,0 +1,146 @@
+[
+  {
+    "title": "Learn TypeScript Course",
+    "issuer": "Codecademy",
+    "date": "2025",
+    "link": "https://www.codecademy.com/profiles/FanMra/certificates/56fb1e71303e37b643bb1905f31c8a09",
+    "description": "Comprehensive course covering TypeScript fundamentals including types, functions, complex types, union types, type narrowing, and advanced object types. Enhanced JavaScript skills with type system for more reliable and maintainable code.",
+    "featured": true
+  },
+  {
+    "title": "Learn Python for Data Science Skill Path",
+    "issuer": "Codecademy",
+    "date": "2025",
+    "link": "https://www.codecademy.com/profiles/FanMra/certificates/ac83e31a3e114189849dd4ee714834eb",
+    "description": "Comprehensive skill path covering Python programming for data science, including pandas, data cleaning, transformation, and analysis using Jupyter Notebook. Completed hands-on projects with real datasets.",
+    "featured": true
+  },
+  {
+    "title": "Learn React Course",
+    "issuer": "Codecademy",
+    "date": "2025",
+    "link": "https://www.codecademy.com/profiles/FanMra/certificates/af00e5032d0a68cc84879983f5d8333b",
+    "description": "Comprehensive course covering React fundamentals including JSX, components, props, state, hooks, and React programming patterns. Built interactive applications and learned modular development approach for powerful web applications.",
+    "featured": true
+  },
+  {
+    "title": "Introduction to AI",
+    "issuer": "MinnaLearn",
+    "date": "2024",
+    "link": "https://certificates.mooc.fi/validate/bazna7crmou",
+    "description": "Internationally recognized course covering the fundamentals and practical applications of artificial intelligence, including machine learning, neural networks, and ethical considerations.",
+    "featured": true
+  },
+  {
+    "title": "Graphic Design Foundations: Layout and Composition",
+    "issuer": "LinkedIn",
+    "date": "2024",
+    "link": "https://www.linkedin.com/learning/certificates/6cdf3791a2310197ca463366eca00084cd1cb9be6fb10784f3414eb4e347900a",
+    "description": "Course on core design principles, focusing on layout, visual hierarchy, balance, alignment, and effective use of space to create compelling and structured designs.",
+    "featured": false
+  },
+  {
+    "title": "AWS Security Best Practices",
+    "issuer": "Amazon Web Services (AWS)",
+    "date": "2023",
+    "link": "https://drive.google.com/file/d/1x2kXG3hvBZnv-ZEGXzx7Lff8NtrUXvwJ/view",
+    "description": "Training on best practices for securing AWS cloud environments.",
+    "featured": true
+  },
+  {
+    "title": "Architecting on AWS",
+    "issuer": "Amazon Web Services (AWS)",
+    "date": "2023",
+    "link": "https://drive.google.com/file/d/1cUEwseD51MTNzyQtDskNWp26dKEG7VHb/view",
+    "description": "Course on designing and deploying scalable, secure applications on AWS.",
+    "featured": true
+  },
+  {
+    "title": "AWS Technical Essentials Day",
+    "issuer": "Amazon Web Services (AWS)",
+    "date": "2023",
+    "link": "https://drive.google.com/file/d/1pJWQxWPID6hNHbUmBzPVCAr9kggYlguz/view?usp=sharing",
+    "description": "Overview of AWS products, services, and common solutions.",
+    "featured": false
+  },
+  {
+    "title": "Developing on AWS",
+    "issuer": "Amazon Web Services (AWS)",
+    "date": "2022",
+    "link": "https://drive.google.com/file/d/1dRHqKM5FQ78AZucTClZJcT_F5-xB67KV/view?usp=sharing",
+    "description": "Course on developing and deploying applications using AWS services.",
+    "featured": true
+  },
+  {
+    "title": "React.js Essential Training",
+    "issuer": "LinkedIn",
+    "date": "2021",
+    "link": "https://www.linkedin.com/learning/certificates/79c206999b8be669b2aa6ee2c5950ed1ebcf923943665271d5ba4702dc1e7ee1?trk=backfilled_certificate",
+    "description": "Essential training in React.js, covering core concepts and practical application development.",
+    "featured": false
+  },
+  {
+    "title": "Continuous Delivery with GitLab",
+    "issuer": "LinkedIn",
+    "date": "2021",
+    "link": "https://www.linkedin.com/learning/certificates/8bcb117c3253c04f49af8838127875348221e4191a7ed41c29a7754b0412e174?trk=backfilled_certificate",
+    "description": "Course on implementing continuous delivery pipelines using GitLab.",
+    "featured": true
+  },
+  {
+    "title": "Learning GitLab",
+    "issuer": "LinkedIn",
+    "date": "2021",
+    "link": "https://www.linkedin.com/learning/certificates/76667278caf5e9c3516b56bdfeb1aa90f1e76c88eedd0f3aa14f1c05d67b28cd?trk=backfilled_certificate",
+    "description": "Introduction to GitLab for version control and DevOps workflows.",
+    "featured": false
+  },
+  {
+    "title": "Digital Transformation",
+    "issuer": "LinkedIn",
+    "date": "2020",
+    "link": "https://www.linkedin.com/learning/certificates/d4101b9247f167c586634f7718135a1c596822932908f7ebadcd5ece4b3f9818?trk=backfilled_certificate",
+    "description": "Course on digital transformation strategies and best practices.",
+    "featured": false
+  },
+  {
+    "title": "Digital Transformation Tips",
+    "issuer": "LinkedIn",
+    "date": "2020",
+    "link": "https://www.linkedin.com/learning/certificates/fa1348a45174a3133c242367e02dfae623a5ef02c71c46cc9e47b19b6e8525fb?trk=backfilled_certificate",
+    "description": "Tips and insights for successful digital transformation initiatives.",
+    "featured": false
+  },
+  {
+    "title": "C# Design Patterns: Part 1",
+    "issuer": "LinkedIn",
+    "date": "2019",
+    "link": "https://www.linkedin.com/learning/certificates/7e9b637eb184050e2179484f25d6a15ceeae25ab2f59ba7d28ba0ddd10b69a97?trk=backfilled_certificate",
+    "description": "Introduction to design patterns in C# for building robust applications.",
+    "featured": false
+  },
+  {
+    "title": "Introduction to AWS for Non-Engineers: 3 Core Services",
+    "issuer": "LinkedIn",
+    "date": "2019",
+    "link": "https://www.linkedin.com/learning/certificates/bd93dbc7addf01d17b357d58d656563d2804ef9fb44d72c94643d47d4fc0ea9d?trk=backfilled_certificate",
+    "description": "Overview of core AWS services for non-engineers.",
+    "featured": false
+  },
+  {
+    "title": "AWS Security Best Practices for Developers",
+    "issuer": "LinkedIn",
+    "date": "2019",
+    "link": "https://www.linkedin.com/learning/certificates/24f03ecb8c07d59de1da4f02f3879c56c0ebfd82cad98e6dd21a1783a260ba4e?trk=backfilled_certificate",
+    "description": "Security best practices for developers working with AWS.",
+    "featured": false
+  },
+  {
+    "title": "Scrum Master",
+    "issuer": "Scrum Alliance",
+    "date": "2017",
+    "link": "https://drive.google.com/file/d/1wIIBzGqblfCz9Yfvfjf66D7wHv9eGK2B/view",
+    "description": "Certification validating Scrum Master skills and agile leadership.",
+    "featured": true
+  }
+]

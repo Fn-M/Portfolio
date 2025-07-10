@@ -37,42 +37,64 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-src/
-├── components/          # React components
-│   ├── Header.tsx      # Header with navigation
-│   ├── Hero.tsx        # Main section
-│   ├── About.tsx       # About me
-│   ├── ProfessionalProjects.tsx  # Professional projects
-│   ├── PersonalProjects.tsx      # Personal projects
-│   ├── Skills.tsx      # Skills
-│   ├── Contact.tsx     # Contact
-│   ├── Footer.tsx      # Footer
-├── contexts/           # React contexts
-├── hooks/              # Custom hooks
-├── types/              # TypeScript type definitions
-├── App.tsx             # Main component
-├── main.tsx            # Entry point
-└── index.css           # Global styles
+Portfolio/
+  ├── index.html
+  ├── package.json
+  ├── postcss.config.js
+  ├── tailwind.config.js
+  ├── tsconfig.json
+  ├── vite.config.ts
+  ├── README.md
+  ├── Resources/
+  │     ├── Certifications.json
+  │     ├── PersonalProjects.json
+  │     └── ProfessionalProjects.json
+  └── src/
+        ├── App.tsx
+        ├── index.css
+        ├── main.tsx
+        └── components/
+              ├── About.tsx
+              ├── AccessibilityMenu.tsx
+              ├── Certifications.tsx
+              ├── Contact.tsx
+              ├── Footer.tsx
+              ├── Header.tsx
+              ├── Hero.tsx
+              ├── PersonalProjects.tsx
+              ├── ProfessionalProjects.tsx
+              └── Skills.tsx
 ```
+
+- The `Resources/` directory contains the required JSON files for certifications and projects.
+- The `src/components/` directory contains the main React components for each section of the portfolio.
+- Other personal information and content are spread throughout the UI components and should be edited directly for full customization.
 
 ## 🎨 Customization
 
-### Colors and Theme
+Some sections of the portfolio now load their data from JSON files located in the `Resources/` directory:
 
-You can change the main colors by editing Tailwind CSS classes in the components.
+- **Certifications**: Edit `Resources/Certifications.json` to add, remove, or update your certifications.
+- **Personal Projects**: Edit `Resources/PersonalProjects.json` to manage your personal projects.
+- **Professional Projects**: Edit `Resources/ProfessionalProjects.json` to manage your professional projects.
 
-### Content
+Each JSON file should follow the structure expected by the corresponding component. See the code for examples or use the provided templates.
 
-To customize the content:
+Other personal information (such as your bio, contact details, and experience) is still spread throughout the UI in the React components (e.g., `About.tsx`, `Contact.tsx`). To fully personalize the portfolio, you will need to edit these files directly and apply your own style and content as needed. 
 
-1. **Personal Information**: Edit the `Hero.tsx` and `About.tsx` components
-2. **Projects**: Update the project arrays in `ProfessionalProjects.tsx` and `PersonalProjects.tsx`
-3. **Skills**: Modify the `skillCategories` array in `Skills.tsx`
-4. **Contact**: Update the information in `Contact.tsx`
+## Resources Directory
 
-### Images
+This project requires several JSON files under the `Resources/` directory:
 
-To add real images, replace the placeholders in the corresponding components. 
+- `Certifications.json`: List of certifications to display in the Certifications section.
+- `PersonalProjects.json`: List of personal projects for the Personal Projects section.
+- `ProfessionalProjects.json`: List of professional projects for the Professional Projects section.
+
+These files are not included by default and should be created/maintained with your own content and structure as used in the components.
+
+## Personal Information
+
+Other personal information (such as your bio, contact details, and experience) is spread throughout the UI in the React components (e.g., `About.tsx`, `Contact.tsx`). To fully personalize the portfolio, you will need to edit these files directly and apply your own style and content as needed. 
