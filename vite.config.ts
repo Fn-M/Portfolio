@@ -9,6 +9,7 @@ export default defineConfig({
     open: true,
     host: true
   },
+  base: '/Portfolio/',
   css: {
     postcss: './postcss.config.js'
   }
