@@ -8,12 +8,13 @@ const Skills = () => {
       title: "Programming Languages",
       icon: <Code className="w-8 h-8" />,
       skills: [
-        { name: "C#", level: 95 },
-        { name: "JavaScript", level: 85 },
-        { name: "HTML/CSS", level: 80 },
-        { name: "Python", level: 75 },
-        { name: "Java", level: 70 },
-        { name: "C++", level: 65 }
+        { name: "C#"},
+        { name: "JavaScript"},
+        { name: "SQL"},
+        { name: "TypeScript"},
+        { name: "HTML/CSS"},
+        { name: "Python"},
+        { name: "Java"}
       ]
     },
     {
@@ -21,12 +22,12 @@ const Skills = () => {
       title: "Frameworks & Technologies",
       icon: <Settings className="w-8 h-8" />,
       skills: [
-        { name: ".NET Core", level: 95 },
-        { name: "React JS", level: 80 },
-        { name: "REST/SOAP APIs", level: 90 },
-        { name: "MVC Pattern", level: 85 },
-        { name: "Windows Services", level: 80 },
-        { name: "KendoUI", level: 75 }
+        { name: ".NET Core" },
+        { name: "React JS" },
+        { name: "REST/SOAP APIs" },
+        { name: "MVC Pattern" },
+        { name: "Windows Services" },
+        { name: "KendoUI" }
       ]
     },
     {
@@ -34,12 +35,11 @@ const Skills = () => {
       title: "Databases & Storage",
       icon: <Database className="w-8 h-8" />,
       skills: [
-        { name: "MS SQL Server", level: 90 },
-        { name: "Oracle", level: 85 },
-        { name: "SQL", level: 95 },
-        { name: "Database Design", level: 85 },
-        { name: "Data Migration", level: 80 },
-        { name: "Performance Tuning", level: 75 }
+        { name: "MS SQL Server" },
+        { name: "Oracle" },
+        { name: "DynamoDB" },
+        { name: "Database Design" },
+        { name: "Data Migration" }
       ]
     },
     {
@@ -47,12 +47,11 @@ const Skills = () => {
       title: "DevOps & Cloud",
       icon: <Cloud className="w-8 h-8" />,
       skills: [
-        { name: "AWS", level: 80 },
-        { name: "GitLab CI/CD", level: 85 },
-        { name: "Atlassian Bamboo", level: 80 },
-        { name: "IIS", level: 85 },
-        { name: "Docker", level: 70 },
-        { name: "Azure DevOps", level: 75 }
+        { name: "AWS" },
+        { name: "GitLab CI/CD" },
+        { name: "Atlassian Bamboo" },
+        { name: "IIS" },
+        { name: "Jira" }
       ]
     },
     {
@@ -60,12 +59,12 @@ const Skills = () => {
       title: "Testing & Quality",
       icon: <Globe className="w-8 h-8" />,
       skills: [
-        { name: "MSTest", level: 85 },
-        { name: "XUnit", level: 80 },
-        { name: "NUnit", level: 85 },
-        { name: "Selenium", level: 75 },
-        { name: "Unit Testing", level: 90 },
-        { name: "Integration Testing", level: 80 }
+        { name: "MSTest" },
+        { name: "XUnit" },
+        { name: "NUnit" },
+        { name: "Selenium" },
+        { name: "Unit Testing" },
+        { name: "Integration Testing" }
       ]
     },
     {
@@ -73,12 +72,12 @@ const Skills = () => {
       title: "Leadership & Agile",
       icon: <Users className="w-8 h-8" />,
       skills: [
-        { name: "Scrum Master", level: 90 },
-        { name: "Team Leadership", level: 85 },
-        { name: "Agile Methodologies", level: 90 },
-        { name: "Mentoring", level: 85 },
-        { name: "Project Management", level: 80 },
-        { name: "Stakeholder Communication", level: 85 }
+        { name: "Scrum Master" },
+        { name: "Team Leadership" },
+        { name: "Agile Methodologies" },
+        { name: "Mentoring" },
+        { name: "Project Management" },
+        { name: "Stakeholder Communication" }
       ]
     }
   ]
@@ -129,34 +128,6 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Focus</h3>
-            <p className="text-gray-600 mb-6">
-              My expertise centers around enterprise software development with a strong focus on .NET technologies, 
-              agile methodologies, and team leadership. I specialize in system migrations, legacy modernization, 
-              and building scalable solutions for the banking and automotive leasing industries.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                Enterprise Software Development
-              </span>
-              <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-                System Migration & Modernization
-              </span>
-              <span className="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
-                Agile Leadership & Mentoring
-              </span>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
