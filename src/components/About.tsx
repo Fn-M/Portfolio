@@ -173,18 +173,32 @@ const About = () => {
                       </div>
                       <p className="text-xs text-gray-600">Amsterdam, Netherlands</p>
                       <p className="text-xs text-gray-700 mt-1">
-                        Oversee project management and delivery as Scrum Master. Mentor junior developers and ensure adherence to best practices. Engage with stakeholders to understand their needs and ensure the team delivers the right solutions.
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>Manage the product lifecycle (test phases, releases, communications to customers).</li>
+                          <li>Translate business requirements into product features.</li>
+                          <li>Ensure the development and quality control standards.</li>
+                          <li>Drive project management and delivery as Scrum Master.</li>
+                          <li>Ensure adherence to best practices and align work with evolving business requirements.</li>
+                          <li>Mentor junior developers and translate business needs into product features.</li>
+                          <li>Foster the relationship with customers while monitoring their satisfaction with the product increments.</li>
+                        </ul>
                       </p>
                     </div>
                     
                     <div className="bg-white rounded-lg p-3 border border-gray-200">
                       <div className="flex items-center justify-between mb-1">
-                        <h6 className="font-medium text-gray-800">Senior Software Engineer</h6>
+                        <h6 className="font-medium text-gray-800">Senior .Net Engineer</h6>
                         <span className="text-xs text-gray-500">Apr 2022 - Oct 2023</span>
                       </div>
                       <p className="text-xs text-gray-600">Amsterdam, Netherlands</p>
                       <p className="text-xs text-gray-700 mt-1">
-                        Led migration of solutions from legacy systems to the most modern .NET technologies. Oversaw deployments and managed production systems.
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>Led migration of solutions from legacy systems to the most modern .NET technologies.</li>
+                          <li>Oversaw deployments and managed production systems.</li>
+                          <li>Translate business requirements into product features.</li>
+                          <li>Increase the quality control.</li>
+                          <li>Ensure the development best practices and quality standards.</li>
+                        </ul>
                       </p>
                     </div>
                     
@@ -195,7 +209,10 @@ const About = () => {
                       </div>
                       <p className="text-xs text-gray-600">Dublin, Ireland</p>
                       <p className="text-xs text-gray-700 mt-1">
-                        Developed, deployed, and maintained an internal web portal accessible across the EMEA region.
+                        <ul className="list-disc list-inside space-y-1">
+                          <li>Develop, deploy, and maintain an internal web portal accessible across multiple countries in the EMEA region.</li>
+                          <li>Implement quality control procedures to ensure smooth and stable releases.</li>
+                        </ul>
                       </p>
                     </div>
                   </div>
@@ -219,13 +236,16 @@ const About = () => {
                   
                   <div className="bg-white rounded-lg p-3 border border-gray-200">
                     <div className="flex items-center justify-between mb-1">
-                      <h6 className="font-medium text-gray-800">Lead Developer & Scrum Master</h6>
+                      <h6 className="font-medium text-gray-800">Software Developer & Scrum Master</h6>
                       <span className="text-xs text-gray-500">Aug 2015 - Nov 2018</span>
                     </div>
                     <p className="text-xs text-gray-600">Lisbon, Portugal</p>
                     <p className="text-xs text-gray-700 mt-1">
-                      Led the creation, deployment, and maintenance of a widely utilized internal portal for over 130 employees. 
-                      Acted as Lead Developer and Scrum Master, mentoring junior developers and introducing Scrum methodologies to the IT team.
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Create, deploy, and maintain a widely used internal portal for over 150 employees.</li>
+                        <li>Mentor junior developers and boost productivity through digitization and automation.</li>
+                        <li>Introduce Scrum methodologies within the IT development team and collaborate with D-level and C-level executives.</li>
+                      </ul>
                     </p>
                   </div>
                 </div>
@@ -248,13 +268,14 @@ const About = () => {
                   
                   <div className="bg-white rounded-lg p-3 border border-gray-200">
                     <div className="flex items-center justify-between mb-1">
-                      <h6 className="font-medium text-gray-800">Software Developer</h6>
+                      <h6 className="font-medium text-gray-800">Analyst / Programmer</h6>
                       <span className="text-xs text-gray-500">Sep 2014 - Aug 2015</span>
                     </div>
                     <p className="text-xs text-gray-600">Lisbon, Portugal</p>
                     <p className="text-xs text-gray-700 mt-1">
-                      Maintained a spectrum of software, including desktop applications and internal web applications. 
-                      Developed and maintained various client solutions, including projects for{" "}
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Maintained a spectrum of software, including desktop applications and internal web applications.</li>
+                        <li>Developed and maintained various client solutions, including projects for{" "}
                       <a
                         href="https://www.cgd.pt/"
                         target="_blank"
@@ -263,6 +284,8 @@ const About = () => {
                       >
                         Caixa Geral de Depósitos
                       </a>, the largest bank in Portugal.
+                      </li>
+                      </ul>
                     </p>
                   </div>
                 </div>
